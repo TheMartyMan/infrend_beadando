@@ -1,0 +1,20 @@
+<div class="container">
+    <h2 class="title">Gyártmányok</h2>
+  
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="loadManufacturingItems()">Frissítés</button>
+      <button mat-raised-button color="accent" routerLink="/manufacturing-list">Gyártmány hozzáadása</button>
+    </div>
+  
+    <div class="item-list" *ngIf="manufacturingItems.length > 0">
+      <div class="item" *ngFor="let item of manufacturingItems">
+        <span class="item-name">Gyártmány neve: {{ item.manufacturingName }}</span>
+        <span class="item-quantity">Mennyiség: {{ item.quantity }}db</span>
+        <button class="btn btn-outline-danger" (click)="deleteManufacturingItem(item.id)">Törlés</button>
+      </div>
+    </div>
+  
+    <div class="mt-4 no-items-message" *ngIf="manufacturingItems.length === 0">
+      Nincsenek gyártmányok. Hozz létre egyet az "Gyártmány hozzáadása" gombbal!
+    </div>
+  </div>
