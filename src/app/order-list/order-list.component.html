@@ -1,0 +1,59 @@
+<div class="row justify-content-md-center">
+    <div class="mt-4">
+        <h4>Rendelésfelvétel</h4>
+        <hr>
+    </div>
+</div>
+
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <form [formGroup]="orderForm">
+
+
+            <div>
+                <label for="customerName">Megrendelő neve</label>
+                <input type="text" id="customerName" name="customerName" formControlName="customerName" required>
+            </div><div class="mb-3"></div>
+            
+            
+            <div class="mb-3">
+                <label for="dateOfBirth" class="form-label">Születési idő</label>
+                <div class="input-group">
+                    <input type="datetime-local" class="form-control text-end pe-1" id="dateOfBirth" name="dateOfBirth" formControlName="dateOfBirth">
+            </div>
+            </div>
+            
+
+
+
+            <div class="mb-3">
+                <label for="order" class="form-label">Gyártmány neve</label>
+                <select class="form-select" id="order" name="order" formControlName="order">
+                    <option value="">Válassz gyártmányt!</option>
+                    <option value="Autó">Autó</option>
+                    <option value="Motorkerékpár">Motorkerékpár</option>
+                    <option value="Kamion">Kamion</option>
+                    <option value="Bicikli">Bicikli</option>
+                    <option value="Csavarkészlet">Csavarkészlet</option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Darabszám</label>
+                <div class="input-group">
+                    <input type="number" step="1" class="form-control text-end pe-1" id="quantity" name="quantity" formControlName="quantity" min="1">
+                    <span class="input-group-text">db</span>
+                </div>
+            </div>
+
+            <div class="mt-4">
+            
+                <div class="text-center">
+                    <button class="btn btn-outline-primary" (click)="makeOrder(); makeOrder()">Mentés</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="title">Raktári egységek</h2>
+  
+    <div class="button-container">
+      <button mat-raised-button color="primary" (click)="loadWarehouseItems()">Frissítés</button>
+      <button mat-raised-button color="accent" routerLink="/warehouse-list">Egység hozzáadása</button>
+    </div>
+  
+    <div class="item-list" *ngIf="warehouseItems.length > 0">
+      <div class="item" *ngFor="let item of warehouseItems">
+        <span class="item-name">Alkatrész neve: {{ item.name }}</span>
+        <span class="item-quantity">Mennyiség: {{ item.quantity }}db</span>
+        <span class="item-stockNumber">Raktári szám: #{{ item.stockNumber }}</span>
+        <span class="item-dateAdded">Bevételezés ideje: {{ item.dateAdded }}</span>
+        <button class="btn btn-outline-danger" (click)="deleteWarehouseItem(item.id)">Törlés</button>
+      </div>
+    </div>
+  
+    <div class="mt-4 no-items-message" *ngIf="warehouseItems.length === 0">
+      Nincsenek raktári egységek. Hozz létre egyet az "Egység hozzáadása" gombbal!
+    </div>
+  </div>

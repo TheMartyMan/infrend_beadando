@@ -1,0 +1,58 @@
+<div class="row justify-content-md-center">
+    <div class="mt-4">
+        <h4>Raktári egység felvétele</h4>
+        <hr>
+    </div>
+</div>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <form [formGroup]="warehouseForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Alkatrész</label>
+                <select class="form-select" id="name" name="name" formControlName="name">
+                    <option value="">Válassz alkatrészt!</option>
+                    <option value="Motor">Motor</option>
+                    <option value="Váz">Váz</option>
+                    <option value="Kerék">Kerék</option>
+                    <option value="M2-es csavar">M2-es csavar</option>
+                    <option value="M6-os csavar">M6-os csavar</option>
+                    <option value="M12-es csavar">M12-es csavar</option>
+                </select>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label for="quantity" class="form-label">Darabszám</label>
+                <div class="input-group">
+                    <input type="number" step="1" class="form-control text-end pe-1" id="quantity" name="quantity" formControlName="quantity" min="1">
+                    <span class="input-group-text">db</span>
+                </div>
+            </div>
+
+
+
+            <div class="mb-3">
+                <label for="stockNumber" class="form-label">Raktári szám</label>
+                <div class="input-group">
+                    <input type="number" class="form-control text-end pe-1" id="stockNumber" name="stockNumber" formControlName="stockNumber" min="1">
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="dateAdded" class="form-label">Bevételezés ideje</label>
+                <div class="input-group">
+                    <input type="datetime-local" class="form-control text-end pe-1" id="dateAdded" name="dateAdded" formControlName="dateAdded">
+            </div>       
+        </div>
+
+
+            <div class="text-end">
+                <button class="btn btn-outline-primary" (click)="saveWarehouseItem()">Mentés</button>
+            </div>
+
+        </form>
+    </div>
+</div>

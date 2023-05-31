@@ -1,0 +1,165 @@
+<div class="row justify-content-md-center">
+    <div class="mt-4">
+        <h4>Gyártmány felvétele</h4>
+        <hr>
+    </div>
+</div>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+        <form [formGroup]="manufacturingForm">
+            <div class="mb-3">
+                <label for="manufacturingName" class="form-label">Gyártmány neve</label>
+                <select class="form-select" id="manufacturingName" name="manufacturingName" formControlName="manufacturingName">
+                    <option value="">Válassz gyártmányt!</option>
+                    <option value="Autó">Autó</option>
+                    <option value="Motorkerékpár">Motorkerékpár</option>
+                    <option value="Kamion">Kamion</option>
+                    <option value="Bicikli">Bicikli</option>
+                    <option value="Csavarkészlet">Csavarkészlet</option>
+                </select>
+                <div class="mb-3"></div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Darabszám</label>
+                    <div class="input-group">
+                        <input type="number" step="1" class="form-control text-end pe-1" id="quantity" name="quantity" formControlName="quantity" min="1">
+                        <span class="input-group-text">db</span>
+                    </div>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <button class="btn btn-outline-primary" (click)="saveManufacturingItem()">Mentés</button>
+                </div>
+
+                
+                <hr class="my-5">
+
+                
+
+                    <div class="mt-4"><th>Autóhoz szükséges alkatrészek</th></div>
+
+
+                <div class="mt-4">
+                    <div>
+                        <table class="table table-bordered">
+                           
+                            <tbody>
+                                <tr>
+                                    <td>Motor</td>
+                                    <td>Váz</td>
+                                    <td>Kerék</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1 db</td>
+                                    <td>1 db</td>
+                                    <td>4 db</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                    <div class="mt-4"><th>Motorkerékpárhoz szükséges alkatrészek</th></div>
+
+                <div class="mt-4">
+                    <div>
+                        <table class="table table-bordered">
+    
+                            <tbody>
+                                <tr>
+                                    <td>Motor</td>
+                                    <td>Váz</td>
+                                    <td>Kerék</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1 db</td>
+                                    <td>1 db</td>
+                                    <td>2 db</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                    <div class="mt-4"><th>Kamionhoz szükséges alkatrészek</th></div>
+
+                <div class="mt-4">
+                    <div>
+                        <table class="table table-bordered">
+                           
+                            <tbody>
+                                <tr>
+                                    <td>Motor</td>
+                                    <td>Váz</td>
+                                    <td>Kerék</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1 db</td>
+                                    <td>2 db</td>
+                                    <td>6 db</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+
+                <div class="mt-4"><th>Biciklihez szükséges alkatrészek</th></div>
+
+
+                <div class="mt-4">
+                    <div>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td>Váz</td>
+                                    <td>Kerék</td>
+                                    <td>Csavarkészlet</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>1 db</td>
+                                    <td>2 db</td>
+                                    <td>1 db</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-4"><th>Csavarkészlethez szükséges alkatrészek</th></div>
+
+                <div class="mt-4">
+                    <div>
+                        <table class="table table-bordered">
+                           
+                            <tbody>
+                                <tr>
+                                    <td>M2-es csavar</td>
+                                    <td>M6-os csavar</td>
+                                    <td>M12-es csavar</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>10 db</td>
+                                    <td>10 db</td>
+                                    <td>10 db</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div> 
+        </form>
+    </div>
+</div>
